@@ -34,13 +34,3 @@ read -p "Would you like to start monitor a port? (Y/N): " confirm && [[ $confirm
 
 checkTTY
 idf.py -p /dev/$answer monitor
-
-
-#ls /dev | grep ttyUSB
-#read -p "Enter your port " portname
-
-#idf.py -p /dev/$portname monitor
-
-
-
-
