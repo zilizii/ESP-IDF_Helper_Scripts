@@ -9,7 +9,7 @@ choices+=("exit")
 
 select answer in "${choices[@]}"; do
   for item in "${choices[@]}"; do
-    if [ $item == $answer ]; then
+    if [[ $item == $answer ]]; then
       break 2
     fi
   done
@@ -17,10 +17,10 @@ done
 
 case $answer in 
 
-	"re-check")
+	re-check)
 		checkTTY
 		;;
-	"exit")
+	exit)
 		echo "Good Luck" && exit 0
 		;;
 	*)
@@ -38,6 +38,3 @@ read -p "Would you like to start monitor a port? (Y/N): " confirm && [[ $confirm
 
 checkTTY
 idf.py -p /dev/$answer monitor
-
-
-
